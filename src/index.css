@@ -10,6 +10,12 @@
   width: 20%;
 }
 
+@media screen and (max-width : 500px ){
+  #todotodaypic{
+    width: 70%;
+  }
+  }
+
 body{
   background-color:#213547;
 }

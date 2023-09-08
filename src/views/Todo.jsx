@@ -142,7 +142,7 @@ function Todo() {
 
 
     return (<>
-        <div className="text-end me-5">
+        <div className="text-end me-5 my-3">
             <small className="" id="userName"></small>
             <button id="logout" onClick={logout} className="badge mx-3">登出</button>
         </div>
@@ -150,7 +150,7 @@ function Todo() {
         <br />
         <div id="todolist" style={{ display: "none" }} className="text-center">
             <input
-                className="form-control w-25 d-inline text-center"
+                className="form-control w-75 w-md-25 d-inline text-center"
                 value={newTodo}
                 onChange={(e) => setNewTodo(e.target.value)}
                 placeholder="新增待辦事項"
@@ -163,14 +163,14 @@ function Todo() {
                 {todos.map((todo, index) => (
                     <li className="my-2 pt-2 row" key={index}>
                         {/* <i className={todo.status ? "bi bi-check-circle" : ""}></i> */}
-                        <span class="col-4 pt-2">
-                            <button title="已完成" className="badge mx-3" onClick={() => toggleStatus(todo.id)}>✔</button>
+                        <span class="col-10 col-md-4 pt-2">
+                            <button title="已完成" className="badge mx-3 mb-2" onClick={() => toggleStatus(todo.id)}>✔</button>
                             <i className={todo.status ? "text-decoration-line-through" : ""}>{todo.content}</i>
 
                         </span>
-                        <span className="col-4">
+                        <span className="col-10 col-md-4">
                             <input
-                                className="form-control w-75 d-inline mx-3 p-1 text-center"
+                                className="form-control w-75 d-inline mx-1 p-1 text-center"
                                 type="text"
                                 placeholder="修改待辦事項內容"
                                 onChange={(e) => {
@@ -181,11 +181,12 @@ function Todo() {
                                     setTodoEdit(newTodoEdit);
                                 }}
                             />
-                            <button title="確認修改" className="badge mx-1 d-inline" onClick={() => updateTodo(todo.id)}><i className="bi bi-pencil"></i></button>
+                            <button title="確認修改" className="badge d-inline" onClick={() => updateTodo(todo.id)}><i className="bi bi-pencil"></i></button>
                         </span>
-                        <span className="col-2 pt-1">
+                        <span className="col-2 col-md-2 pt-1">
                             <button title="刪除項目" className="badge mx-1" onClick={() => deleteTodo(todo.id)}>✘</button>
                         </span>
+                        <hr className="my-3 mx-auto" />
                     </li>
                 ))}
             </ul>
