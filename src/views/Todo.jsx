@@ -146,7 +146,7 @@ function Todo() {
             <small className="" id="userName"></small>
             <button id="logout" onClick={logout} className="badge mx-3">登出</button>
         </div>
-        <img src="/public/logo.png" id="todotodaypic" className="d-block rounded mx-auto" /><br />
+        <img src="/todotoday/logo.png" id="todotodaypic" className="d-block rounded mx-auto" /><br />
         <br />
         <div id="todolist" style={{ display: "none" }} className="text-center">
             <input
@@ -158,7 +158,7 @@ function Todo() {
             <button title="新增" className="badge mx-3" onClick={addTodo}><i class="bi bi-plus-circle-dotted"></i></button>
             <hr className="w-75 mx-auto" />
             <p id='notodolist' className='mt-5'>目前沒有待辦事項<br></br>
-                <img src='/public/done.png' class='w-50'></img></p>
+                <img src='/todotoday/done.png' class='w-50'></img></p>
             <ul className="mt-3 m-5">
                 {todos.map((todo, index) => (
                     <li className="my-2 pt-2 row" key={index}>
