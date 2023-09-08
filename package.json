@@ -2,7 +2,7 @@
   "name": "react_todolist",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://bjqs02.github.io/todotoday/",
+  "homepage": "https://bjqs02.github.io/todotoday/#/login",
   "type": "module",
   "scripts": {
     "dev": "vite",
