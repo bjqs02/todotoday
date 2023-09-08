@@ -24,7 +24,8 @@ function Todo() {
             }).then((res) => {
                 // console.log(res);
                 userName.innerText = `哈囉${res.data.nickname}`;
-                document.getElementById("todotoday").style.display = "inline-block";
+                document.getElementById("nav").style.display = "none";
+                // document.getElementById("todotoday").style.display = "inline-block";
                 document.getElementById("todolist").style.display = "block";
                 getTodos()
 
@@ -53,7 +54,8 @@ function Todo() {
                     'success'
                   )
                 // 登出成功後隱藏待辦事項區塊
-                document.getElementById("todotoday").style.display = "none";
+                // document.getElementById("todotoday").style.display = "none";
+                document.getElementById("nav").style.display = "block";
             }).then(()=>{
                 navigate('/login');
             })
