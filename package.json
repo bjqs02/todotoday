@@ -1,7 +1,7 @@
 {
   "name": "react_todolist",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "homepage": "https://bjqs02.github.io/todotoday/",
   "type": "module",
   "scripts": {
